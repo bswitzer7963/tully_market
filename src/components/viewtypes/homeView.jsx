@@ -21,7 +21,7 @@ export default function HomeView({setCurState}) {
     return (
         <div id="home-view">
             <div id="intro">
-                <motion.img id="storefront" src="/storefront_1.jpg" alt="Store Front" style={{y: plaxOffset}}/>
+                <motion.img id="storefront" src="/storefront_ripped.png" alt="Store Front" style={{y: plaxOffset}}/>
                 <div id="onload-intro-ani">
                     <motion.div
                         id="intro-logo-container"
@@ -58,7 +58,14 @@ export default function HomeView({setCurState}) {
                 </div>
             </div>
             <div id="home-view-content">
+                {/* <div id="grad-trans"/> */}
+                <div id="owner-message-container">
+                    
+                    <h2 id="owner-message-header">
+                        Message From Mrs.Vernay:
+                    </h2>
 
+                </div>
                 <motion.h1
                     className="home-header"
                     initial={{y: 40, opacity: 0}}

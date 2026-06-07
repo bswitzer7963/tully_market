@@ -1,7 +1,7 @@
 #footer {
   display: flex;
   flex-direction: row;
-  background-color: rgb(167, 127, 76);
+  background-color: var(--site-green);
   padding-top: 10dvh;
   padding-bottom: 10dvh;
   gap: 5vw;
