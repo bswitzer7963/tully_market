@@ -1,20 +1,12 @@
-#navbar {
-  position: fixed;
-  top: 2vh;
-  background-color: rgb(67, 145, 99);
-  padding: 
+body, html {
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 #app-content {
   display: flex;
   flex-direction: column;
-}
-
-#footer {
-  display: flex;
-  flex-direction: row;
-  background-color: rgb(67, 145, 99);
-  margin-left: 20vh;
-  padding: 10vh;
-  gap: 5vh;
+  top: 12dvh;
+  align-items: center;
+  justify-content: center;
 }

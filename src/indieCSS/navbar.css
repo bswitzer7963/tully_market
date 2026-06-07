@@ -1,0 +1,92 @@
+.outline {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.rect {
+  stroke-dashoffset: 5;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s;
+  stroke: #fff;
+}
+
+.navbar {
+  margin-left: 5vh;
+  left: 5vw;
+  position: fixed;
+  top: 4dvh;
+  left: 0;
+  height: 8dvh;
+  width: 90vw;
+  z-index: 999;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.container:hover .outline .rect {
+  transition: 999999s;
+  /* Must specify these values here as something *different* just so that the transition works properly */
+  stroke-dashoffset: 1;
+  stroke-dasharray: 0;
+}
+
+.container {
+  position: absolute;
+  inset: 0;
+  background-color: var(--site-green-lowalpha);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0.5em;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.btn {
+  padding: 0.5em 1.5em;
+  color: white;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.btn:hover {
+  background: #fff3;
+}
+
+.btn:nth-child(1):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 1 5 81.4 5 50;
+}
+
+.btn:nth-child(2):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 7.1 5.8 67.6 5.8 50;
+}
+
+.btn:nth-child(3):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 14 6.5 52.4 6.5 50;
+}
+
+.btn:nth-child(4):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 21.5 9.3 31.8 9.3 50;
+}
+
+.btn:nth-child(5):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 31.9 5 19.5 5 50;
+}
+
+.btn:nth-child(6):hover ~ svg .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 38.1 4.4 8.4 4.4 50;
+}
+
+.btn:hover ~ .outline .rect {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 0 0 10 40 10 40;
+  transition: 0.5s !important;
+}

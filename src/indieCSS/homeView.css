@@ -1,0 +1,100 @@
+#home-view {   
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+/* https://codepen.io/avalecko/details/jOwyJyb */
+#storefront {
+    margin-top: -25dvh;
+    width: 100vw;
+    animation-duration: 30s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation: storeImage 20s ease-in-out infinite alternate;
+}
+
+@keyframes storeImage {
+    from {transform: scale(1) translateY(0);}
+    to {transform: scale(1.1) translateY(-2vw);}
+}
+
+#home-view-content {
+    margin-top: -2dvh;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+    padding: 2%;
+    box-sizing: border-box;
+    background-color: rgb(211, 209, 170);
+}
+
+#home-view-content h1 {
+    background-color: rgb(167, 127, 76);
+}
+
+#intro-logo {
+    width: 400px;
+    display: block;
+    margin-top: -10vh;
+}
+
+#intro-logo-container {
+    height: 25dvh;
+    width: 27vw;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    /* background-color: rgba(255, 255, 255, .15); */
+    background-color: var(--site-green-lowalpha);
+    border-radius: 128px;
+    color: rgba(255, 255, 255, 0.708);
+    position: absolute;
+    top: 15%;
+    left: 3%;
+    padding-bottom: -30%;
+}
+
+/* https://webdesign.tutsplus.com/how-to-create-a-frosted-glass-effect-in-css--cms-32535t */
+#intent-stmt {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    scale: 0.7;
+    gap: 3%;
+}
+
+.intent-word {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: var(--site-green-lowalpha);
+    border-radius: 16px;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin: 3dvh auto;
+}
+
+/* DEPCRECATED */
+/* #overlook-bg {
+    width: 150vw;
+    position: fixed;
+    margin-top:  -80dvh;
+    left: -10vw;
+    z-index: -1;
+    object-fit: cover;
+    pointer-events: none;
+    touch-action: none;
+}
+
+#overlook-fg {
+    width: 150vw;
+    position: relative;
+    margin-top: -80dvh;
+    left: -10vw;
+    object-fit: cover;
+    pointer-events: none;
+    touch-action: none;
+} */
