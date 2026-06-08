@@ -1,11 +1,20 @@
+//Ripped paper effect DC: https://www.bing.com/videos/riverview/relatedvideo?q=gimp+torn+paper+edge+easy&mid=8DA5954A8E9CB15D6D078DA5954A8E9CB15D6D07&churl=https://www.youtube.com/channel/UCfO77hYhephENwf_USh-2xg&FORM=VIRE
+//Typed DC: https://dev.to/kristinegusta/how-to-use-typedjs-in-react-beginner-friendly-dnc
 import "../../indieCSS/homeView.css";
-import {motion, useScroll, useTransform} from "framer-motion";
+import {useRef, useEffect} from 'react';
+import {motion, useScroll, useTransform, useInView} from "framer-motion";
 import EmblaCarousel from '../carousel/EmblaCarousel';
+import Typed from "typed.js";
+import polaroidCarousel from "../carousel/polaroidCarousel.jsx";
 
 //Framer intro stuff taken from my emmets woodworking project
 export default function HomeView({setCurState}) {
     const { scrollY } = useScroll();
     const plaxOffset = useTransform(scrollY, [0, 500], [0, -50]);
+
+    const paperContainer = useRef(null);
+    const typedRef = useRef(null);
+    const canSee = useInView(paperContainer, {once: true, amount: 0.5});
 
     const intentWords = ["Fresh.", "Simple.", "Sustainable.", "Locally Sourced."];
 
@@ -17,6 +26,21 @@ export default function HomeView({setCurState}) {
     ];
 
     const featuredSlides = [1, 2, 3];
+
+    useEffect(() => {
+        if (!canSee) return;
+
+        const typed = new Typed(typedRef.current, {
+            strings: [`"We have proudly sourced the Tully community for 3 years now, with a focus on healthy and non-processed items, which are labelled in store.
+                While we can't guarantee the most competitive prices on the market, we surely can offer you the freshest our area has to offer!"`
+            ],
+            typeSpeed: 20,
+            showCursor: false,
+            loop: false,
+        });
+
+        return () => typed.destroy()
+    }, [canSee]);
 
     return (
         <div id="home-view">
@@ -58,23 +82,36 @@ export default function HomeView({setCurState}) {
                 </div>
             </div>
             <div id="home-view-content">
-                {/* <div id="grad-trans"/> */}
                 <div id="owner-message-container">
-                    
-                    <h2 id="owner-message-header">
-                        Message From Mrs.Vernay:
-                    </h2>
-
+                    <motion.div id="owner-message-paper" ref={paperContainer}>
+                        <div id="owner-message-upper">
+                            <img id="tack1" src="/tack.png" alt="Tack"/>
+                            <img id="owner-avatar" src="/anonymous.webp" alt="Mrs.Vernay Avatar"/>
+                            <h2 id="owner-message-header">
+                                Message From Mrs.Vernay:
+                            </h2>
+                            <img id="tack2" src="/tack.png" alt="Tack"/>
+                        </div>
+                        <div id="owner-message-body">
+                            <span ref={typedRef}></span>
+                            <hr id="hr1" className="dashed"/>
+                            <hr id="hr2" className="dashed"/>
+                            <hr id="hr3" className="dashed"/>
+                        </div>
+                    </motion.div>
                 </div>
-                <motion.h1
-                    className="home-header"
-                    initial={{y: 40, opacity: 0}}
-                    whileInView={{y: 0, opacity: 1}}
-                    transition={{duration: 0.8, ease: 'easeOut'}}
-                >
-                    Our Proud Vendors
-                </motion.h1>
-                <EmblaCarousel slides={vendorSlides} options={{loop: true}}/>
+                <div id="spotlight-container">
+                    <motion.h1
+                        className="home-header"
+                        initial={{y: 40, opacity: 0}}
+                        whileInView={{y: 0, opacity: 1}}
+                        transition={{duration: 0.8, ease: 'easeOut'}}
+                    >
+                        Vendor Spotlight
+                    </motion.h1>
+                    vendorSlides.map((slide, i))
+                    {/* <EmblaCarousel slides={vendorSlides} options={{loop: true}}/> */}
+                </div>
                 <motion.h1
                     className="home-header"
                     initial={{y: 40, opacity: 0}}
