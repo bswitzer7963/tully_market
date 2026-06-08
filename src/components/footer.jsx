@@ -1,9 +1,9 @@
-
+import "../indieCSS/footer.css";
 
 export default function Footer() {
     return (
         <div id="footer">
-            <div id="footer-btns">
+            <div id="footer-content">
                 <button id="about-btn" onClick={() => handleFootBtn('about')}>
                     About Us
                 </button>     

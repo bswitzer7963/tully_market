@@ -1,0 +1,19 @@
+#footer {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--site-green);
+  padding-top: 10dvh;
+  padding-bottom: 10dvh;
+  gap: 5vw;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+}
+
+#footer-content {
+  display: flex;
+  flex-direction: row;
+  gap: 10vw;
+  align-items: center;
+  justify-content: center;
+}

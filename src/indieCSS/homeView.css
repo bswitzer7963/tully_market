@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+#home-view {   
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+#intro {
+    z-index: 1;
+}
+/* https://codepen.io/avalecko/details/jOwyJyb */
+#storefront {
+    margin-top: -25dvh;
+    width: 100vw;
+    animation-duration: 30s;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation: storeImage 20s ease-in-out infinite alternate;
+    filter: drop-shadow(4px 12px 15px rgba(0, 0, 0, 0.5));
+}
+
+@keyframes storeImage {
+    from {transform: scale(1) translateY(0);}
+    to {transform: scale(1.1) translateY(-2vw);}
+}
+
+#intro-logo {
+    width: 400px;
+    display: block;
+    margin-top: -10vh;
+}
+
+#intro-logo-container {
+    height: 25dvh;
+    width: 27vw;
+    backdrop-filter: blur(10px);
+    /* background-color: rgba(255, 255, 255, .15); */
+    background-color: var(--site-green-lowalpha);
+    border-radius: 128px;
+    color: rgba(255, 255, 255, 0.708);
+    position: absolute;
+    top: 15%;
+    left: 3%;
+    padding-bottom: -30%;
+}
+
+/* https://webdesign.tutsplus.com/how-to-create-a-frosted-glass-effect-in-css--cms-32535t */
+#intent-stmt {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    scale: 0.7;
+    gap: 3%;
+}
+
+.intent-word {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    background-color: var(--site-green-lowalpha);
+    border-radius: 16px;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    width: fit-content;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    margin: 3dvh auto;
+}
+
+#owner-message-container {
+    margin-top: -4dvh;
+    background-image: url('/corkboard.png');
+    background-size: 50vmin;
+    background-repeat: repeat;
+    height: 70dvh;
+    box-sizing: border-box;
+    width: 110vw;
+}
+
+#owner-message-paper {
+    position: absolute;
+    font-family: "Pangolin", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 1.3rem;
+    font-style: normal;
+    margin-top: 28dvh;
+    margin-left: 20vw;
+    height: 30dvh;
+    width: 60vw;
+    padding: 5vmin;
+    filter: drop-shadow(2px 10px 15px rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(75deg,  rgb(134, 134, 90) 0%, rgb(225, 225, 148) 5%, rgb(231, 231, 151) 25%, rgb(163, 163, 105) 40%, rgb(199, 199, 130) 55%, rgb(225, 225, 148) 80%, rgb(225, 225, 148) 95%, rgb(150, 150, 101) 100%);
+}
+
+#owner-message-upper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1vw;
+    margin-top: -3dvh;
+}
+
+#owner-message-body {
+  line-height: 2.5rem;
+}
+
+.dashed {
+    position: absolute;
+    border: none;
+    border-top: 3px dashed #436f91;
+    width: 90%;
+    z-index: 3
+}
+
+#hr1 {
+    top: 17dvh;
+}
+#hr2 {
+    top: 21dvh;
+}
+#hr3 {
+    top: 26dvh;
+}
+
+#tack1 {
+    position: absolute;
+    height: 10dvh;
+    margin-left: -4vw;
+    margin-top: -11dvh;
+    filter: drop-shadow(12px 20px 5px rgba(0, 0, 0, 0.5));
+}
+#tack2 {
+    position: absolute;
+    transform: scaleX(-1);
+    height: 10dvh;
+    margin-left: 53.5vw;
+    margin-top: -11dvh;
+    filter: drop-shadow(12px 20px 5px rgba(0, 0, 0, 0.5));
+}
+
+#owner-avatar {
+    height: 10dvh;
+    border-radius: 5vmin;
+}
+
+#spotlight-container {
+    background-image: url('/burlap.webp');
+    background-size: 50vmin;
+    background-repeat: repeat;
+    height: 70dvh;
+    box-sizing: border-box;
+    width: 110vw;
+}
+

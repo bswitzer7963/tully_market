@@ -1,3 +1,17 @@
-#home-view {
-  height: 200vh;
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+}
+
+:root {
+    --site-green: rgb(4, 48, 19);
+    --site-green-lowalpha: rgba(55, 88, 66, 0.4);
 }
