@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+.polaroid-container {
+    position: absolute;
+    background-color: rgb(243, 239, 197);
+    display: flex;
+    flex-direction: row;
+    width: 30vw;
+    height: 55dvh;
+    left: 10vw;
+    filter: drop-shadow(2px 10px 15px rgba(0, 0, 0, 0.5));
+    top: 20dvh;
+}
+
+.polaroid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+
+.polaroid-carousel {
+    position: relative;
+}
+
+.polaroid-stacks {
+  position: relative;
+  width:100%;
+  height: 60dvh;
+}
+
+.polaroid-image {
+    width: 26vw;
+}
+
+.polaroid-title {
+    font-family: "Pangolin", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem;
+}
+
+.prev-btn-polaroid {
+    position: relative;
+    width: 8vw;
+    height: 8dvh;
+    cursor: pointer;
+    left: 21vw;
+    backdrop-filter: blur(10px);
+    background-color: var(--site-green-lowalpha);
+    border-radius: 16px;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+    top: 18dvh;
+    z-index: 15;
+}
+
+ .next-btn-polaroid {
+    position: relative;
+    width: 8vw;
+    height: 8dvh;
+    cursor: pointer;
+    font-size: 2.5rem;
+    color: grey;
+    left: 13vw;
+    top: -50dvh;
+    border-radius: 15px;
+    z-index: 15;
+ }
+
+.polaroid-carousel-desc {
+    position: absolute;
+    width: 40vw;
+    left: 40vw;
+    height: 40dvh;
+    backdrop-filter: blur(10px);
+    background-color: var(--site-green-lowalpha);
+    border-radius: 16px;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    padding: 5vmin;
+    z-index: 15;
+}

@@ -12,7 +12,7 @@
 /* https://codepen.io/avalecko/details/jOwyJyb */
 #storefront {
     margin-top: -25dvh;
-    width: 100vw;
+    width: 110vw;
     animation-duration: 30s;
     animation-delay: 0s;
     animation-timing-function: linear;
@@ -66,6 +66,11 @@
     padding-left: 1vw;
     padding-right: 1vw;
     margin: 3dvh auto;
+}
+
+#home-view-content {
+    margin-left: 10vw;
+    margin-top: -6dvh;
 }
 
 #owner-message-container {
@@ -149,8 +154,12 @@
     background-image: url('/burlap.webp');
     background-size: 50vmin;
     background-repeat: repeat;
-    height: 70dvh;
+    height: 100dvh;
     box-sizing: border-box;
     width: 110vw;
 }
 
+#spotlight-header {
+    font-size: 2.5rem;
+    color: rgb(102, 33, 33, 0.5)
+}

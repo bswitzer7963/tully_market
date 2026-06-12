@@ -5,7 +5,7 @@ import {useRef, useEffect} from 'react';
 import {motion, useScroll, useTransform, useInView} from "framer-motion";
 import EmblaCarousel from '../carousel/EmblaCarousel';
 import Typed from "typed.js";
-import polaroidCarousel from "../carousel/polaroidCarousel.jsx";
+import PolaroidCarousel from "../carousel/polaroidCarousel.jsx";
 
 //Framer intro stuff taken from my emmets woodworking project
 export default function HomeView({setCurState}) {
@@ -20,9 +20,9 @@ export default function HomeView({setCurState}) {
 
     //Change with fetches
     const vendorSlides = [
-        {id: 1, image: '/emmi_farms.webp', title: 'Emmi Farms', description: 'Emmis Farms has the absolute best...'},
-        {id: 2, image: '/reeves_farms_removebg.png', title: 'Reeves Farms', description: 'Reeves Farms has been a staple of...'},
-        {id: 3, image: '/hiwire_honey.png', title: 'Hiwire Honey', description: 'Hiwire honey has the best honey in the business!'},
+        {id: 1, image: '/emmi_farms.webp', title: 'Emmi Farms', desc: 'Emmis Farms has the absolute best...'},
+        {id: 2, image: '/reeves_farms_removebg.png', title: 'Reeves Farms', desc: 'Reeves Farms has been a staple of...'},
+        {id: 3, image: '/hiwire_honey.png', title: 'Hiwire Honey', desc: 'Hiwire honey has the best honey in the business!'},
     ];
 
     const featuredSlides = [1, 2, 3];
@@ -88,7 +88,7 @@ export default function HomeView({setCurState}) {
                             <img id="tack1" src="/tack.png" alt="Tack"/>
                             <img id="owner-avatar" src="/anonymous.webp" alt="Mrs.Vernay Avatar"/>
                             <h2 id="owner-message-header">
-                                Message From Mrs.Vernay:
+                                Message From Kathy Vernay:
                             </h2>
                             <img id="tack2" src="/tack.png" alt="Tack"/>
                         </div>
@@ -102,6 +102,7 @@ export default function HomeView({setCurState}) {
                 </div>
                 <div id="spotlight-container">
                     <motion.h1
+                        id="spotlight-header"
                         className="home-header"
                         initial={{y: 40, opacity: 0}}
                         whileInView={{y: 0, opacity: 1}}
@@ -109,7 +110,7 @@ export default function HomeView({setCurState}) {
                     >
                         Vendor Spotlight
                     </motion.h1>
-                    vendorSlides.map((slide, i))
+                    <PolaroidCarousel list={vendorSlides}/>
                     {/* <EmblaCarousel slides={vendorSlides} options={{loop: true}}/> */}
                 </div>
                 <motion.h1
