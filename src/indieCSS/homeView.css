@@ -78,7 +78,7 @@
     background-image: url('/corkboard.png');
     background-size: 50vmin;
     background-repeat: repeat;
-    height: 70dvh;
+    height: 90dvh;
     box-sizing: border-box;
     width: 110vw;
 }
@@ -154,12 +154,56 @@
     background-image: url('/burlap.webp');
     background-size: 50vmin;
     background-repeat: repeat;
-    height: 100dvh;
+    height: 280dvh;
     box-sizing: border-box;
     width: 110vw;
 }
 
+#cork-burlap-delimeter {
+    position: absolute;
+    width: 110%;
+    top: 190dvh;
+    filter: drop-shadow(4px 12px 15px rgba(0, 0, 0, 0.5));
+}
+
 #spotlight-header {
-    font-size: 2.5rem;
-    color: rgb(102, 33, 33, 0.5)
+    font-weight: 400;
+    padding-left: 2vw;
+    font-size: 5rem;
+    backdrop-filter: blur(8px);
+    background-color: var(--site-green-lowalpha);
+    border-radius: 16px;
+    color: rgb(255, 255, 255);
+    margin-left: 26vw;
+    margin-top: -7dvh;
+    width: 41%;
+}
+
+#new-header {
+    position: absolute;
+    font-weight: 400;
+    padding-left: 2vw;
+    font-size: 5rem;
+    backdrop-filter: blur(8px);
+    background-color: var(--site-green-lowalpha);
+    border-radius: 16px;
+    color: rgb(255, 255, 255);
+    margin-left: 26vw;
+    margin-top: 40dvh;
+    width: 50%;
+}
+
+#burlap-burlap-delimeter {
+    position: absolute;
+    width: 110%;
+    top: 310dvh;
+    filter: drop-shadow(4px 12px 15px rgba(0, 0, 0, 0.5));
+}
+
+#spotlight-container {
+    scrollbar-width: none;
+}
+
+#spotlight-container::-webkit-scrollbar {
+    display: none;
 }
