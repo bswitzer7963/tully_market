@@ -63,7 +63,7 @@ export default function ContactView() {
 function ContactForm() {
     return (
         <div id="contact-form-container">
-            <form name="contact" method="POST" data-netlify="true">
+            <form name="contact" method="POST" data-netlify="true" action="/success">
                 <input type="hidden" name="form-name" value="contact"/>
                 <h1 id="write-in-header">
                     Have any questions? Write To Us!
