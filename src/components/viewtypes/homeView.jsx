@@ -32,8 +32,7 @@ export default function HomeView({setCurState}) {
         if (!canSee) return;
 
         const typed = new Typed(typedRef.current, {
-            strings: [`"We have proudly sourced the Tully community for 3 years now, with a focus on healthy and non-processed items, which are labelled in store.
-                While we can't guarantee the most competitive prices on the market, we surely can offer you the freshest our area has to offer!"`
+            strings: [`The mission of our store is to provide a wide variety of healthy grocery choices to the people of the Tully area, incorporating as many local food producers as possible, with a goal of accenting the foods that are not ultra processed. The purpose of the store is not to make money, but rather to serve the local area.`
             ],
             typeSpeed: 20,
             showCursor: false,
@@ -98,6 +97,7 @@ export default function HomeView({setCurState}) {
                             <hr id="hr1" className="dashed"/>
                             <hr id="hr2" className="dashed"/>
                             <hr id="hr3" className="dashed"/>
+                            <hr id="hr4" className="dashed"/>
                         </div>
                     </motion.div>
                 </div>

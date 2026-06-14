@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+#contact-view {
+    background-image: url('/corkboard.png');
+    background-size: 50vmin;
+    background-repeat: repeat;
+    height: 200dvh;
+    box-sizing: border-box;
+    width: 110vw;
+    color: white;
+}
+
+#contact-view-container {
+    margin-left: 10vw;
+    margin-top: 20dvh;
+}
+
+#contact-header {
+    font-weight: 400;
+    width: 38vw;
+    font-size: 5rem;
+    backdrop-filter: blur(10px);
+    background-color: var(--site-green-lowalpha);
+    border-radius: 16px;
+    padding-left: 3vw;
+}
+
+#contact-post-its {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5dvh;
+}
+
+#contact-post-its div {
+    font-family: "Pangolin", cursive;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 1.3rem;
+    font-style: normal;
+    height: 15dvh;
+    width: 20vw;
+    padding: 3vmin;
+    margin-left: 1vw;
+    color: black;
+    filter: drop-shadow(2px 10px 15px rgba(0, 0, 0, 0.5));
+}
+
+.post-it:first-child {
+    background-image: linear-gradient(-25deg,  rgb(134, 134, 90) 0%, rgb(225, 225, 148) 5%, rgb(231, 231, 151) 15%, rgb(163, 163, 105) 30%, rgb(199, 199, 130) 55%, rgb(225, 225, 148) 65%, rgb(225, 225, 148) 95%, rgb(150, 150, 101) 100%);
+}
+
+.post-it:nth-child(2) {
+    background-image: linear-gradient(40deg,  rgb(134, 134, 90) 0%, rgb(225, 225, 148) 5%, rgb(231, 231, 151) 25%, rgb(163, 163, 105) 40%, rgb(199, 199, 130) 55%, rgb(225, 225, 148) 80%, rgb(225, 225, 148) 95%, rgb(150, 150, 101) 100%);
+}
+
+.post-it:nth-child(3) {
+    background-image: linear-gradient(120deg,  rgb(134, 134, 90) 0%, rgb(225, 225, 148) 5%, rgb(231, 231, 151) 25%, rgb(163, 163, 105) 40%, rgb(199, 199, 130) 55%, rgb(225, 225, 148) 80%, rgb(225, 225, 148) 95%, rgb(150, 150, 101) 100%);
+}
+
+.post-it:nth-child(4) {
+    background-image: linear-gradient(210deg,  rgb(134, 134, 90) 0%, rgb(225, 225, 148) 5%, rgb(231, 231, 151) 25%, rgb(163, 163, 105) 40%, rgb(199, 199, 130) 55%, rgb(225, 225, 148) 80%, rgb(225, 225, 148) 95%, rgb(150, 150, 101) 100%);
+}
+
+#insta-icon {
+    width: 2vw;
+    margin-right: 1vw;
+    margin-left: 6vw;
+}
+
+#fb-icon {
+    width: 2vw;
+}
+

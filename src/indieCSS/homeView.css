@@ -92,7 +92,7 @@
     font-style: normal;
     margin-top: 28dvh;
     margin-left: 20vw;
-    height: 30dvh;
+    height: 34dvh;
     width: 60vw;
     padding: 5vmin;
     filter: drop-shadow(2px 10px 15px rgba(0, 0, 0, 0.5));
@@ -127,6 +127,9 @@
 }
 #hr3 {
     top: 26dvh;
+}
+#hr4 {
+    top: 31dvh;
 }
 
 #tack1 {
@@ -188,7 +191,7 @@
     background-color: var(--site-green-lowalpha);
     border-radius: 16px;
     color: rgb(255, 255, 255);
-    margin-left: 26vw;
+    margin-left: 24vw;
     margin-top: 40dvh;
     width: 50%;
 }
