@@ -41,7 +41,7 @@
     width: 20vw;
     padding: 3vmin;
     margin-left: 1vw;
-    color: black;
+    color: var(--paper-text);
     filter: drop-shadow(2px 10px 15px rgba(0, 0, 0, 0.5));
 }
 
@@ -71,3 +71,102 @@
     width: 2vw;
 }
 
+#contact-form-container {
+    font-family: "Pangolin", cursive;
+    background-image: linear-gradient(75deg, rgb(134, 134, 90) 0%, rgb(225, 225, 148) 5%, rgb(231, 231, 151) 25%, rgb(163, 163, 105) 40%, rgb(199, 199, 130) 55%, rgb(225, 225, 148) 80%, rgb(225, 225, 148) 95%, rgb(150, 150, 101) 100%);
+    padding: 3vmin;
+    border-radius: 2px;
+    filter: drop-shadow(2px 10px 15px rgba(0, 0, 0, 0.5));
+    width: 60vw;
+    margin-left: 15vw;
+    margin-top: 10dvh;
+}
+
+#contact-form-container .dashed {
+    margin-left: 2vw;
+    margin-bottom: 4dvh;
+}
+
+#contact-form-container h1 {
+    color: var(--paper-text);
+}
+
+#contact-form-container input,
+#contact-form-container textarea {
+    font-family: "Pangolin", cursive;
+    background: transparent;
+    border: none;
+    width: 100%;
+    font-size: 1.2rem;
+    color: var(--paper-text);
+    outline: none;
+    margin-left: 2vw;
+    resize: none;
+}
+
+#contact-form-container label {
+    margin-top: 1dvh;
+    color: var(--paper-text);
+    display: block;
+}
+
+#contact-form-container button {
+    color: var(--paper-text);
+    background: transparent;
+    border: 2px dashed #436f91;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 1vmin;
+    margin-top: 2dvh;
+}
+
+#contact-form-container button:hover {
+    background: var(--site-green-lowalpha);
+}
+
+.paper-form {
+    font-family: "Pangolin", cursive;
+    background-image: linear-gradient(75deg, rgb(134, 134, 90) 0%, rgb(225, 225, 148) 5%, rgb(231, 231, 151) 25%, rgb(163, 163, 105) 40%, rgb(199, 199, 130) 55%, rgb(225, 225, 148) 80%, rgb(225, 225, 148) 95%, rgb(150, 150, 101) 100%);
+    padding: 3vmin;
+    border-radius: 2px;
+    color: var(--paper-text);
+    filter: drop-shadow(2px 10px 15px rgba(0, 0, 0, 0.5));
+    width: 40vw;
+}
+
+.paper-form input,
+.paper-form textarea {
+    font-family: "Pangolin", cursive;
+    background: transparent;
+    border: none;
+    border-bottom: 2px dashed #436f91;
+    width: 100%;
+    padding: 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--paper-text);
+    outline: none;
+}
+
+.paper-form label {
+    font-size: 1rem;
+    color: var(--paper-text);
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.paper-form button {
+    margin-top: 2rem;
+    font-family: "Pangolin", cursive;
+    background: transparent;
+    border: 2px dashed #436f91;
+    border-radius: 8px;
+    padding: 0.5rem 2rem;
+    font-size: 1.1rem;
+    color: var(--paper-text);
+    cursor: pointer;
+}
+
+.paper-form button:hover {
+    background: var(--site-green-lowalpha);
+}

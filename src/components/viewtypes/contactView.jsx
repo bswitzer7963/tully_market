@@ -53,12 +53,46 @@ export default function ContactView() {
                         </span>
                     </div>
                 </div>
-                <div id="write-in-container">
-                    <h1 id="write-in-header">
-                        Have any questions? Write To Us!
-                    </h1>
-                </div>
+                <ContactForm/>
             </div>
+        </div>
+    )
+}
+
+//Uses netlify to send email via form
+function ContactForm() {
+    return (
+        <div id="contact-form-container">
+            <form name="contact" method="POST" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact"/>
+                <h1 id="write-in-header">
+                    Have any questions? Write To Us!
+                </h1>
+                <div className="form-field">
+                    <label htmlFor="name">
+                        Name
+                    </label>
+                    <input type="text" id="name" name="name" required/>
+                    <hr id="fl1" className="dashed"/>
+                </div>
+                <div className="form-field">
+                    <label htmlFor="email">
+                        Email
+                    </label>
+                    <input type="email" id="email" name="email" required/>
+                    <hr id="fl2" className="dashed"/>
+                </div>
+                <div className="form-field">
+                    <label htmlFor="message">
+                        Message
+                    </label>
+                    <textarea id="message" name="message" rows="5" required/>
+                    <hr id="fl3" className="dashed"/>
+                </div>
+                <button type="submit">
+                    Send Message
+                </button>
+            </form>
         </div>
     )
 }

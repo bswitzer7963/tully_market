@@ -90,6 +90,7 @@
     font-weight: 400;
     font-size: 1.3rem;
     font-style: normal;
+    color: var(--paper-text);
     margin-top: 28dvh;
     margin-left: 20vw;
     height: 34dvh;
