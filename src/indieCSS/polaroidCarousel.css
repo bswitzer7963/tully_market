@@ -55,6 +55,7 @@
     font-weight: 400;
     font-style: normal;
     font-size: 2rem;
+    color: var(--paper-text);
 }
 
 .prev-btn-polaroid.right {

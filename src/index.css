@@ -15,4 +15,5 @@ body {
 :root {
     --site-green: rgb(4, 48, 19);
     --site-green-lowalpha: rgba(55, 88, 66, 0.4);
+    --paper-text: rgb(60, 48, 32);
 }
