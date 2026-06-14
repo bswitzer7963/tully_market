@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: "Quicksand", sans-serif;
-  font-weight: 400;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    background-color: rgb(190, 185, 164);
 }
 
 :root {

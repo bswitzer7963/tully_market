@@ -21,8 +21,9 @@ export default function HomeView({setCurState}) {
     //Change with fetches
     const vendorSlides = [
         {id: 1, image: '/emmi_farms.webp', title: 'Emmi Farms', desc: 'Emmis Farms has the absolute best...'},
-        {id: 2, image: '/reeves_farms_removebg.png', title: 'Reeves Farms', desc: 'Reeves Farms has been a staple of...'},
+        {id: 2, image: '/reeves_farms.png', title: 'Reeves Farms', desc: 'Reeves Farms has been a staple of...'},
         {id: 3, image: '/hiwire_honey.png', title: 'Hiwire Honey', desc: 'Hiwire honey has the best honey in the business!'},
+        {id: 4, image: '/random-pic.webp', title: 'Some Family', desc: 'This is some family that i found on the internet that i wanted to see whether it would fit well or not for the polaroid. dasdddddddd ddddddddddddddd dddddd ddddd ddd dd ddd ddd dddd d dddd ddddd dddddd ddddd d dddd ddd dd dddd'}
     ];
 
     const featuredSlides = [1, 2, 3];
@@ -31,8 +32,7 @@ export default function HomeView({setCurState}) {
         if (!canSee) return;
 
         const typed = new Typed(typedRef.current, {
-            strings: [`"We have proudly sourced the Tully community for 3 years now, with a focus on healthy and non-processed items, which are labelled in store.
-                While we can't guarantee the most competitive prices on the market, we surely can offer you the freshest our area has to offer!"`
+            strings: [`The mission of our store is to provide a wide variety of healthy grocery choices to the people of the Tully area, incorporating as many local food producers as possible, with a goal of accenting the foods that are not ultra processed. The purpose of the store is not to make money, but rather to serve the local area.`
             ],
             typeSpeed: 20,
             showCursor: false,
@@ -97,54 +97,36 @@ export default function HomeView({setCurState}) {
                             <hr id="hr1" className="dashed"/>
                             <hr id="hr2" className="dashed"/>
                             <hr id="hr3" className="dashed"/>
+                            <hr id="hr4" className="dashed"/>
                         </div>
                     </motion.div>
                 </div>
                 <div id="spotlight-container">
+                    <img id="cork-burlap-delimeter" src="/wood_delimeter.webp" alt="Wood Delimeter"/>
                     <motion.h1
                         id="spotlight-header"
                         className="home-header"
-                        initial={{y: 40, opacity: 0}}
-                        whileInView={{y: 0, opacity: 1}}
-                        transition={{duration: 0.8, ease: 'easeOut'}}
+                        initial={{x: -200, opacity: 0}}
+                        whileInView={{x: 0, opacity: 1}}
+                        transition={{duration: 0.8, ease: 'easeIn'}}
                     >
                         Vendor Spotlight
                     </motion.h1>
-                    <PolaroidCarousel list={vendorSlides}/>
-                    {/* <EmblaCarousel slides={vendorSlides} options={{loop: true}}/> */}
+                    <PolaroidCarousel list={vendorSlides} descSide="right"/>
+                    <img id="burlap-burlap-delimeter" src="/wood_delimeter.webp" alt="Wood Delimeter"/>
+                    <motion.h1
+                        id="new-header"
+                        className="home-header"
+                        initial={{x: 200, opacity: 0}}
+                        whileInView={{x: 0, opacity: 1}}
+                        transition={{duration: 0.8, ease: 'easeIn'}}
+                    >
+                        Our New Favorites
+                    </motion.h1>
+                    <PolaroidCarousel list={vendorSlides} descSide="left"/>
                 </div>
-                <motion.h1
-                    className="home-header"
-                    initial={{y: 40, opacity: 0}}
-                    whileInView={{y: 0, opacity: 1}}
-                    transition={{duration: 0.8, ease: 'easeOut'}}
-                >
-                    Our New Favorites
-                </motion.h1>
-                <EmblaCarousel slides={featuredSlides} options={{loop: true}}/>
             </div>
 
         </div>
     )
 }
-
-
-/* function Vendor({name, description}) {
-
-}
-
-function Event({name, date, time, description}) {
-
-}
-
-function FeaturedProduct({label, vendor, price}) {
-
-} */
-
-
-//Old animation
-/*             <div id="intro">
-                <motion.img id="overlook-bg" src="/overlook_back.png" alt="BG" style={{opacity: opacIntro}} onWheel={e => window.scrollBy(0, e.deltaY)}/>
-                <img id="overlook-fg" src="/overlook_fore.png" alt="FG" onWheel={e => window.scrollBy(0, e.deltaY)}/>
-                <motion.img id="logo" src="/emmet_logo_reg.png" alt="LOGO" style={{opacity: opacIntro}} onWheel={e => window.scrollBy(0, e.deltaY)}/>
-            </div>*/

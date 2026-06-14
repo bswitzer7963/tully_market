@@ -1,19 +1,62 @@
 #footer {
-  display: flex;
-  flex-direction: row;
-  background-color: var(--site-green);
-  padding-top: 10dvh;
-  padding-bottom: 10dvh;
-  gap: 5vw;
-  width: 100vw;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    backdrop-filter: blur(8px);
+    background-color: var(--site-green-lowalpha);
+    color: white;
+    border-radius: 24px;
+    padding: 8dvh 5vw 12dvh 5vw;
+    gap: 5vw;
+    width: 95vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50dvh;
 }
 
 #footer-content {
-  display: flex;
-  flex-direction: row;
-  gap: 10vw;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    align-items: top;
+    justify-content: center;
+}
+
+#footer-logo {
+    margin-top: -10dvh;
+    width: 20vw;
+}
+
+#footer-desc {
+    margin-top: -10dvh;
+}
+
+#quick-links {
+    display: flex;
+    flex-direction: column;
+    margin-left: -5vw;
+}
+#quick-links button {
+    color: white;
+    backdrop-filter: blur(8px);
+    background-color: rgb(245, 245, 245, 0.3);
+    border-radius: 16px;
+    border: none;
+    padding: 1vmin;
+    margin-bottom: 1dvh;
+    cursor: pointer;
+    z-index: 99;
+}
+
+#footer-info {
+    font-weight: 400;
+}
+
+#footer-hours {
+    width: 10vw;
+}
+
+#map {
+    border-radius: 24px;
 }
