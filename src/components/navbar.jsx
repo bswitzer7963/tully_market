@@ -42,7 +42,7 @@ export default function NavBar({curState, setCurState}) {
                     Contact
                 </div>
                 <div className="btn" onClick={() => handleNavBtn('inventory')}>
-                    Our Local Suppliers
+                    Our Proud Suppliers
                 </div>
                 <div className="btn" onClick={() => handleNavBtn('in-season')}>
                     What's in Season?

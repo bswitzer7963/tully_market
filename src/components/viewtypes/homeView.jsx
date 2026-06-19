@@ -3,7 +3,6 @@
 import "../../indieCSS/homeView.css";
 import {useRef, useEffect} from 'react';
 import {motion, useScroll, useTransform, useInView} from "framer-motion";
-import EmblaCarousel from '../carousel/EmblaCarousel';
 import Typed from "typed.js";
 import PolaroidCarousel from "../carousel/polaroidCarousel.jsx";
 

@@ -1,0 +1,25 @@
+#inventory-view {
+    position: relative;
+    min-height: 100vh;
+    height: dvh;
+    width: 120vw;
+    margin-left: 5vw;
+}
+
+#inventory-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 120vw;
+    height: 100dvh;
+    background-image: url('/tully-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(16px);
+    transform: scale(1.1);
+}
+
+#inventory-content {
+    position: relative;
+    padding-top: 25dvh;
+}
